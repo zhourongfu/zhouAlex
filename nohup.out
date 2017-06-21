@@ -1,0 +1,345 @@
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+INFO  Bye!
+FATAL Port 80 has been used. Try other port instead.
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Error: listen EADDRINUSE 0.0.0.0:80
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at Server._listen2 (net.js:1257:14)
+    at listen (net.js:1293:10)
+    at net.js:1403:9
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+FATAL listen EADDRINUSE 0.0.0.0:80
+Error: listen EADDRINUSE 0.0.0.0:80
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at Server._listen2 (net.js:1257:14)
+    at listen (net.js:1293:10)
+    at net.js:1403:9
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.
+Unhandled rejection TypeError: /opt/blog/themes/icarus/layout/index.ejs:2
+    1| <% page.posts.each(function(post) { %>
+ >> 2|     <%- partial('common/article', { post: post, index: true }) %>
+    3| <% });
+    4| if (page.total > 1) { %>
+    5|     <nav id="page-nav">
+
+/opt/blog/themes/icarus/layout/common/article.ejs:37
+    35|         <footer class="article-footer">
+    36|             <%- partial('share/index', { post: post }) %>
+ >> 37|             <%- partial('comment/counter', { post: post }) %>
+    38|         </footer>
+    39|     </div>
+    40|     <% if (!index) { %>
+
+/opt/blog/themes/icarus/layout/comment/counter.ejs:2
+    1| <% if (post.comments) { %>
+ >> 2|     <% if (theme.comment.disqus) { %>
+    3|         <a href="<%- post.permalink %>#comments" class="article-comment-link disqus-comment-count" data-disqus-url="<%= post.permalink %>"><%= __('article.comments') %></a>
+    4|     <% } else if (theme.comment.duoshuo) { %>
+    5|         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.permalink %>"><%= __('article.comments') %></a>
+
+Cannot read property 'disqus' of undefined
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:110)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1030)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2377)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2776)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:107)
+    at Query.forEach (/opt/blog/node_modules/warehouse/lib/query.js:42:5)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:44)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:34:72)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiled (/opt/blog/node_modules/hexo/lib/theme/view.js:127:30)
+    at View.render (/opt/blog/node_modules/hexo/lib/theme/view.js:29:15)
+    at /opt/blog/node_modules/hexo/lib/hexo/index.js:387:25
+Unhandled rejection TypeError: /opt/blog/themes/icarus/layout/index.ejs:2
+    1| <% page.posts.each(function(post) { %>
+ >> 2|     <%- partial('common/article', { post: post, index: true }) %>
+    3| <% });
+    4| if (page.total > 1) { %>
+    5|     <nav id="page-nav">
+
+/opt/blog/themes/icarus/layout/common/article.ejs:37
+    35|         <footer class="article-footer">
+    36|             <%- partial('share/index', { post: post }) %>
+ >> 37|             <%- partial('comment/counter', { post: post }) %>
+    38|         </footer>
+    39|     </div>
+    40|     <% if (!index) { %>
+
+/opt/blog/themes/icarus/layout/comment/counter.ejs:2
+    1| <% if (post.comments) { %>
+ >> 2|     <% if (theme.comment.disqus) { %>
+    3|         <a href="<%- post.permalink %>#comments" class="article-comment-link disqus-comment-count" data-disqus-url="<%= post.permalink %>"><%= __('article.comments') %></a>
+    4|     <% } else if (theme.comment.duoshuo) { %>
+    5|         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.permalink %>"><%= __('article.comments') %></a>
+
+Cannot read property 'disqus' of undefined
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:110)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1030)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2377)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2776)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:107)
+    at Query.forEach (/opt/blog/node_modules/warehouse/lib/query.js:42:5)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:44)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:34:72)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiled (/opt/blog/node_modules/hexo/lib/theme/view.js:127:30)
+    at View.render (/opt/blog/node_modules/hexo/lib/theme/view.js:29:15)
+    at /opt/blog/node_modules/hexo/lib/hexo/index.js:387:25
+Unhandled rejection TypeError: /opt/blog/themes/icarus/layout/index.ejs:2
+    1| <% page.posts.each(function(post) { %>
+ >> 2|     <%- partial('common/article', { post: post, index: true }) %>
+    3| <% });
+    4| if (page.total > 1) { %>
+    5|     <nav id="page-nav">
+
+/opt/blog/themes/icarus/layout/common/article.ejs:37
+    35|         <footer class="article-footer">
+    36|             <%- partial('share/index', { post: post }) %>
+ >> 37|             <%- partial('comment/counter', { post: post }) %>
+    38|         </footer>
+    39|     </div>
+    40|     <% if (!index) { %>
+
+/opt/blog/themes/icarus/layout/comment/counter.ejs:2
+    1| <% if (post.comments) { %>
+ >> 2|     <% if (theme.comment.disqus) { %>
+    3|         <a href="<%- post.permalink %>#comments" class="article-comment-link disqus-comment-count" data-disqus-url="<%= post.permalink %>"><%= __('article.comments') %></a>
+    4|     <% } else if (theme.comment.duoshuo) { %>
+    5|         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.permalink %>"><%= __('article.comments') %></a>
+
+Cannot read property 'disqus' of undefined
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:110)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1030)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2377)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2776)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:107)
+    at Query.forEach (/opt/blog/node_modules/warehouse/lib/query.js:42:5)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:44)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:34:72)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiled (/opt/blog/node_modules/hexo/lib/theme/view.js:127:30)
+    at View.render (/opt/blog/node_modules/hexo/lib/theme/view.js:29:15)
+    at /opt/blog/node_modules/hexo/lib/hexo/index.js:387:25
+Unhandled rejection TypeError: /opt/blog/themes/icarus/layout/index.ejs:2
+    1| <% page.posts.each(function(post) { %>
+ >> 2|     <%- partial('common/article', { post: post, index: true }) %>
+    3| <% });
+    4| if (page.total > 1) { %>
+    5|     <nav id="page-nav">
+
+/opt/blog/themes/icarus/layout/common/article.ejs:37
+    35|         <footer class="article-footer">
+    36|             <%- partial('share/index', { post: post }) %>
+ >> 37|             <%- partial('comment/counter', { post: post }) %>
+    38|         </footer>
+    39|     </div>
+    40|     <% if (!index) { %>
+
+/opt/blog/themes/icarus/layout/comment/counter.ejs:2
+    1| <% if (post.comments) { %>
+ >> 2|     <% if (theme.comment.disqus) { %>
+    3|         <a href="<%- post.permalink %>#comments" class="article-comment-link disqus-comment-count" data-disqus-url="<%= post.permalink %>"><%= __('article.comments') %></a>
+    4|     <% } else if (theme.comment.duoshuo) { %>
+    5|         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.permalink %>"><%= __('article.comments') %></a>
+
+Cannot read property 'disqus' of undefined
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:110)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1030)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2377)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2776)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:107)
+    at Query.forEach (/opt/blog/node_modules/warehouse/lib/query.js:42:5)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:44)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:34:72)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiled (/opt/blog/node_modules/hexo/lib/theme/view.js:127:30)
+    at View.render (/opt/blog/node_modules/hexo/lib/theme/view.js:29:15)
+    at /opt/blog/node_modules/hexo/lib/hexo/index.js:387:25
+Unhandled rejection TypeError: /opt/blog/themes/icarus/layout/index.ejs:2
+    1| <% page.posts.each(function(post) { %>
+ >> 2|     <%- partial('common/article', { post: post, index: true }) %>
+    3| <% });
+    4| if (page.total > 1) { %>
+    5|     <nav id="page-nav">
+
+/opt/blog/themes/icarus/layout/common/article.ejs:37
+    35|         <footer class="article-footer">
+    36|             <%- partial('share/index', { post: post }) %>
+ >> 37|             <%- partial('comment/counter', { post: post }) %>
+    38|         </footer>
+    39|     </div>
+    40|     <% if (!index) { %>
+
+/opt/blog/themes/icarus/layout/comment/counter.ejs:2
+    1| <% if (post.comments) { %>
+ >> 2|     <% if (theme.comment.disqus) { %>
+    3|         <a href="<%- post.permalink %>#comments" class="article-comment-link disqus-comment-count" data-disqus-url="<%= post.permalink %>"><%= __('article.comments') %></a>
+    4|     <% } else if (theme.comment.duoshuo) { %>
+    5|         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.permalink %>"><%= __('article.comments') %></a>
+
+Cannot read property 'disqus' of undefined
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:110)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1030)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2377)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2776)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:107)
+    at Query.forEach (/opt/blog/node_modules/warehouse/lib/query.js:42:5)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:44)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:34:72)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiled (/opt/blog/node_modules/hexo/lib/theme/view.js:127:30)
+    at View.render (/opt/blog/node_modules/hexo/lib/theme/view.js:29:15)
+    at /opt/blog/node_modules/hexo/lib/hexo/index.js:387:25
+Unhandled rejection TypeError: /opt/blog/themes/icarus/layout/index.ejs:2
+    1| <% page.posts.each(function(post) { %>
+ >> 2|     <%- partial('common/article', { post: post, index: true }) %>
+    3| <% });
+    4| if (page.total > 1) { %>
+    5|     <nav id="page-nav">
+
+/opt/blog/themes/icarus/layout/common/article.ejs:37
+    35|         <footer class="article-footer">
+    36|             <%- partial('share/index', { post: post }) %>
+ >> 37|             <%- partial('comment/counter', { post: post }) %>
+    38|         </footer>
+    39|     </div>
+    40|     <% if (!index) { %>
+
+/opt/blog/themes/icarus/layout/comment/counter.ejs:2
+    1| <% if (post.comments) { %>
+ >> 2|     <% if (theme.comment.disqus) { %>
+    3|         <a href="<%- post.permalink %>#comments" class="article-comment-link disqus-comment-count" data-disqus-url="<%= post.permalink %>"><%= __('article.comments') %></a>
+    4|     <% } else if (theme.comment.duoshuo) { %>
+    5|         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.permalink %>"><%= __('article.comments') %></a>
+
+Cannot read property 'disqus' of undefined
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:110)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1030)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2377)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2776)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:107)
+    at Query.forEach (/opt/blog/node_modules/warehouse/lib/query.js:42:5)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:44)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:34:72)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiled (/opt/blog/node_modules/hexo/lib/theme/view.js:127:30)
+    at View.render (/opt/blog/node_modules/hexo/lib/theme/view.js:29:15)
+    at /opt/blog/node_modules/hexo/lib/hexo/index.js:387:25
+Unhandled rejection TypeError: /opt/blog/themes/icarus/layout/index.ejs:2
+    1| <% page.posts.each(function(post) { %>
+ >> 2|     <%- partial('common/article', { post: post, index: true }) %>
+    3| <% });
+    4| if (page.total > 1) { %>
+    5|     <nav id="page-nav">
+
+/opt/blog/themes/icarus/layout/common/article.ejs:37
+    35|         <footer class="article-footer">
+    36|             <%- partial('share/index', { post: post }) %>
+ >> 37|             <%- partial('comment/counter', { post: post }) %>
+    38|         </footer>
+    39|     </div>
+    40|     <% if (!index) { %>
+
+/opt/blog/themes/icarus/layout/comment/counter.ejs:2
+    1| <% if (post.comments) { %>
+ >> 2|     <% if (theme.comment.disqus) { %>
+    3|         <a href="<%- post.permalink %>#comments" class="article-comment-link disqus-comment-count" data-disqus-url="<%= post.permalink %>"><%= __('article.comments') %></a>
+    4|     <% } else if (theme.comment.duoshuo) { %>
+    5|         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.permalink %>"><%= __('article.comments') %></a>
+
+Cannot read property 'disqus' of undefined
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:110)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:1030)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2377)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:2776)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiledSync (/opt/blog/node_modules/hexo/lib/theme/view.js:122:20)
+    at View.renderSync (/opt/blog/node_modules/hexo/lib/theme/view.js:50:21)
+    at Object.partial (/opt/blog/node_modules/hexo/lib/plugins/helper/partial.js:42:17)
+    at Object.wrapper (/opt/blog/node_modules/lodash/lodash.js:4941:19)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:107)
+    at Query.forEach (/opt/blog/node_modules/warehouse/lib/query.js:42:5)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:30:44)
+    at eval (eval at <anonymous> (/opt/blog/node_modules/ejs/lib/ejs.js:242:14), <anonymous>:34:72)
+    at /opt/blog/node_modules/ejs/lib/ejs.js:255:15
+    at _compiled (/opt/blog/node_modules/hexo/lib/theme/view.js:127:30)
+    at View.render (/opt/blog/node_modules/hexo/lib/theme/view.js:29:15)
+    at /opt/blog/node_modules/hexo/lib/hexo/index.js:387:25
